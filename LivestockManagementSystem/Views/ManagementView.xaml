@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LivestockManagementSystem.Views.ManagementView"
+             xmlns:models="clr-namespace:LivestockManagementSystem.Models"
+             xmlns:viewmodel="clr-namespace:LivestockManagementSystem.ViewModels"
+             Title="ManagementView">
+
+    <ContentPage.BindingContext>
+        <viewmodel:ManagementViewModel/>
+    </ContentPage.BindingContext>
+
+
+
+    <Grid  RowDefinitions="Auto, *" >
+
+
+        
+            
+
+        <Grid Grid.Row="1"
+              RowDefinitions="*, Auto">
+
+            <Image Source="cows.png" Aspect="Fill" />
+
+            <VerticalStackLayout   Grid.Row="1">
+                <BoxView Color="{DynamicResource Primary}"
+                         HeightRequest="1"/>
+                <Grid  RowDefinitions="Auto, Auto"
+                      ColumnDefinitions="*,*,*,*,*,*,*"
+                      Padding="10"
+                      RowSpacing="10"
+                      ColumnSpacing="10"
+                      BackgroundColor="GreenYellow">
+                    <VerticalStackLayout Grid.Row="0"
+                                         Grid.Column="1" x:Name="bl" Grid.WidthRequest="150">
+                                         
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Row="0"
+                                         Grid.Column="3" x:Name="bl2" Grid.WidthRequest="150">
+                        
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Row="0"
+                                         Grid.Column="5" x:Name="bl3" Grid.WidthRequest="150">
+                        
+                    </VerticalStackLayout>
+
+                    
+
+                   
+                </Grid>
+                
+            </VerticalStackLayout>
+            
+        </Grid>
+        
+    </Grid>
+</ContentPage>

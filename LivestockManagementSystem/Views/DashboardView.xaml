@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+             x:Class="LivestockManagementSystem.Views.DashboardView"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:LivestockManagementSystem.Models"
+             xmlns:viewmodel="clr-namespace:LivestockManagementSystem.ViewModels"
+             Title="Dashboard">
+    
+    
+    <StackLayout x:Name="bb">
+        
+        <Border
+        Margin="40,40"
+        BackgroundColor="Gray"
+        StrokeShape="RoundRectangle 10">
+            
+        <CollectionView 
+            BackgroundColor="LightGrey" 
+            ItemsSource="{Binding Animals, Source={viewmodel:MainViewModel}}" >
+            
+            <CollectionView.ItemTemplate>
+                <DataTemplate >
+                    <Border BackgroundColor="Green" StrokeShape="RoundRectangle 10">
+                        <Grid ColumnDefinitions="*,*,*,*,*,*">
+                            
+                            
+                                <Label Grid.Column="0" Text="{Binding Id, Mode=TwoWay}"/>
+                                <Label Grid.Column="1" Text="{Binding Cost, Mode=TwoWay}"/>
+                                <Label Grid.Column="2" Text="{Binding Weight, Mode=TwoWay}"/>
+                                <Label Grid.Column="3" Text="{Binding Colour, Mode=TwoWay}"/>
+                                <Label Grid.Column="4" Text="{Binding Milk, Mode=TwoWay}"/>
+                                <Label Grid.Column="5" Text="{Binding Wool, Mode=TwoWay}"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        </Border>
+        
+            
+        
+    </StackLayout>
+
+
+</ContentPage>

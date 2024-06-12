@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LivestockManagementSystem.Views.FinanceView"
+             xmlns:models="clr-namespace:LivestockManagementSystem.Models"
+             xmlns:viewmodel="clr-namespace:LivestockManagementSystem.ViewModels"
+             
+             Title="FinanceView">
+
+    <ContentPage.BindingContext>
+        <viewmodel:FinanceViewModel/>
+    </ContentPage.BindingContext>
+    
+     
+
+    <StackLayout>
+        
+
+        <Label Text="Queuery Livestock" FontSize="Large" HorizontalOptions="Center" />
+        <StackLayout Orientation="Horizontal">
+
+            <Entry x:Name="TypeInput" Placeholder="Enter the animal type"  />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+
+            <Entry x:Name="ColourInput" Placeholder="Enter animal's colour" />
+                
+        </StackLayout>
+        <StackLayout>
+            <Button Text="Calculate" x:Name="QueuryBtn" Clicked="CalcButton_Clicked"/>
+        </StackLayout>
+
+        <StackLayout>
+            <Label x:Name="NumberOfLiveStocks" Text="Number of selected livestocks: " FontSize="Large" HorizontalOptions="Center" />
+        </StackLayout>
+        <StackLayout>
+            <Label x:Name="PercentageOfLivestock" Text="Percentage of livestock:" FontSize="Large" HorizontalOptions="Center" />
+        </StackLayout>
+        <StackLayout>
+            <Label x:Name="GovernmentTaxPerDay" Text="Daily tax of selected livestocks: " FontSize="Large" HorizontalOptions="Center" />
+        </StackLayout>
+        <StackLayout>
+            <Label x:Name="ProfitOrLossPerDay" Text="Profit (may be neagative, then considered as Loss): " FontSize="Large" HorizontalOptions="Center" />
+        </StackLayout>
+        <StackLayout>
+            <Label x:Name="AverageWeight" Text="Average Weight: " FontSize="Large" HorizontalOptions="Center" />
+        </StackLayout>
+        <StackLayout>
+            <Label x:Name="ProduceAmountPerDay" Text="Produce Amount: "  FontSize="Large" HorizontalOptions="Center" />
+        </StackLayout>
+
+        <Label Text="Estimate Future Investment" FontSize="Large" HorizontalOptions="Center" />
+        <StackLayout Orientation="Horizontal">
+
+            <Entry x:Name="TypeInput1" Placeholder="Enter the animal type"  />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+
+            <Entry x:Name="AnimalAmout" Placeholder="Enter animal's amount" />
+
+        </StackLayout>
+        <StackLayout>
+            <Button Text="Calculate" x:Name="InvestmentBtn" Clicked="InvestmentBtn_Clicked"/>
+        </StackLayout>
+
+        <StackLayout>
+            <Label x:Name="FutureInvestment" Text="Buying such amount of this animal type will bring daily profit of: "  FontSize="Large" HorizontalOptions="Center" />
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>
